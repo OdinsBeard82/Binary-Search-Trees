@@ -1,33 +1,23 @@
-//creates root node
-class Tree {
-    constructor(root = null) {
-  this.root = root;
-}
-}
-
-Tree.prototype.addNode = function(n) {
-  if (this.root == null) {
-    this.root = n;
-  }
-};
-
  class Node {
-    constructor(data, parent, left, right = null) {
+    constructor(data, left = null, right = null) {
   this.data = data;
-  this.parent = parent;
   this.left = left;
   this.right = right;
     }
 }
+//creates root node
+class Tree {
+    constructor() {
+  this.root = null;
+}
 
-function buildTree(data) {
+add(data) {
+    const node = this.root;
     if (node === null) {
+        this.root = new Node(data);
         return;
     } else {
-        return searchTree(node);
-    }
-}
-function searchTree(node) {
+        const searchTree = function(node) {
     //if the data is less than node.data then 
     //node goes on tfe left
             if (data < node.data) {
@@ -57,9 +47,11 @@ function searchTree(node) {
             }
         };
         return searchTree(node);
-    
+    }
+}
 
- function findMin() {
+
+findMin() {
 // set current node to root node.
     let current = this.root;
 // while current.left does not equal null
@@ -71,7 +63,7 @@ function searchTree(node) {
     return current.data;
 }
 
-function findMax() {
+findMax() {
     let current = this.root;
     while (current.right !=null) {
         current = current.right;
@@ -79,7 +71,7 @@ function findMax() {
     return current.data;
 }
 
-function find(data) {
+find(data) {
     let current = this.root;
     while (current.data !== data) {
         if (data < current.data) {
@@ -94,7 +86,27 @@ function find(data) {
     return current;
 }
 
-function isPresent(data) {
+levelOrder(root) {
+   if(root == null) 
+   return;
+   
+   const queue = [root];
+   const result = [];
+
+   while(queue.length) {
+    let len = queue.length;
+    result.push(queue.map (node => node.val));
+
+    while (len --) {
+        let node = queue.shift();
+        if (node.left) queue.push(node.left);
+        if (node.right) queue.push(node.right);
+    }
+   }
+   return result;
+    } 
+        
+isPresent(data) {
 //set current node to root node
     let current = this.root;
 //while current node is not null
@@ -117,15 +129,18 @@ function isPresent(data) {
     return false;
 }
 
-function remove(data) {
+remove(data) {
+    this.root = this.removeNode(this.root, data);
+}
 // recursive function passing in the node and data we want to remove
-    const removeNode = function(node, data) {
-//
+    removeNode(node, data) {
+//is there an empty tree
         if (node == null) {
             return null;
         }
+//does data = node.data
         if (data == node.data) {
-            //node has no children
+//node has no children
             if (node.left == null && node.right == null) {
                 return null;
             }
@@ -138,22 +153,129 @@ function remove(data) {
             return node.left;
            }
 //node has two children
-           var tempNode = node.right;
+           let tempNode = node.right;
            while (tempNode.left !== null) {
             tempNode = tempNode.left;
            }
            node.data = tempNode.data;
-           node.right = removeNode(node.right, tempNode.data);
-
-        }
+           node.right = this.removeNode(node.right, tempNode.data);
+           return node;
+        } else if (data < node.data) {
+        node.left = this.removeNode(node.left, data);
+      } else {
+        node.right = this.removeNode(node.right, data);
+      }
+      return node;
     }
+  
+    Inorder(node = this.root) {
+      if (node !== null) {
+        this.Inorder(node.left);
+        console.log(node.data);
+        this.Inorder(node.right);
+      }
+    }
+
+    preorder(node = this.root) {
+        if (node !== null) {
+          console.log(node.data);
+          this.preorder(node.left);
+          this.preorder(node.right);
+        }
+      }
+
+      postorder(node = this.root) {
+        if (node !== null) {
+          this.postorder(node.left);
+          this.postorder(node.right);
+          console.log(node.data);
+        }
+      }
+
+
+      findMinHeight(node = this.root) {
+        if (node == null) {
+            return -1;
+    };
+        let left = this.findMinHeight(node.left);
+        let right = this.findMinHeight(node.right);
+        if (left < right) {
+            return left +1;
+        } else {
+            return right +1;
+        };
+    }
+
+
+    isBalanced() {
+        return (this.findMinHeight() >= this.findMaxHeight() - 1)
+    }
+
+    reBalance() {
+        
+    }
+
+
+    findMaxHeight(node = this.root) {
+        if (node == null) {
+            return -1;
+        };
+        let left = this.findMaxHeight(node.left);
+        let right = this.findMaxHeight(node.right);
+        if (left > right) {
+            return left +1;
+        } else {
+            return right +1;
+        };
+    }
+
+
+    prettyPrint(node = this.root, prefix = "", isLeft = true) {
+        if (node === null) {
+          return;
+        }
+        if (node.right !== null) {
+          this.prettyPrint(node.right, `${prefix}${isLeft ? "│   " : "    "}`, false);
+        }
+        console.log(`${prefix}${isLeft ? "└── " : "┌── "}${node.data}`);
+        if (node.left !== null) {
+          this.prettyPrint(node.left, `${prefix}${isLeft ? "    " : "│   "}`, true);
+        }
+  }
+}
+  
+  function buildTree () {
+  const numbers = [1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 645, 324];
+  return numbers;
 }
 
+  const bst = new Tree();
+  const numbers = buildTree();
+  
+  for (let i = 0; i < numbers.length; i++) {
+    bst.add(numbers[i]); // Add each number to the binary search tree
+    bst.remove(7);
+    bst.remove(67);
+    bst.add(109);
+  }
+  
+  console.log("Minimum value:", bst.findMin());
+  console.log("Maximum value", bst.findMax());
+  console.log("levelOrder" , +  bst.levelOrder());
+  console.log("findMinHeight " , bst.findMinHeight());
+  console.log("findMaxHeight " , bst.findMaxHeight());
+  console.log("isBalanced " , bst.isBalanced());
+ 
+;
+  bst.Inorder();
+  bst.preorder();
+  bst.postorder();
+  bst.prettyPrint();
+ 
 
 
+
+
+
+  
    
-
-
-
-
-
