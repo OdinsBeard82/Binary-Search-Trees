@@ -19,7 +19,7 @@ add(data) {
     } else {
         const searchTree = function(node) {
     //if the data is less than node.data then 
-    //node goes on tfe left
+    //node goes on the left
             if (data < node.data) {
                 if (node.left === null) {
                     node.left = new Node(data);
