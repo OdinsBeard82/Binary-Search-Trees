@@ -1,21 +1,3 @@
-
-
-<img width="800" alt="Binary Search Tree Visualization" src="https://example.com/screenshot.png">
-Project Description
-Binary Search Tree is a web-based application designed to visualize and interact with binary search trees (BSTs). This tool helps users understand and demonstrate key operations of BSTs, including insertion, deletion, and traversal, through an interactive and real-time visual representation.
-
-Table of Contents
-Project Description
-Installation
-Usage
-Features
-Technologies Used
-Project Structure
-Contributing
-License
-Contact
-Installation
-Clone the repository:
 # Binary Search Tree
 
 ![Screenshot](https://github.com/user-attachments/assets/b637d079-2124-4e68-9a26-74122820bcb7)
