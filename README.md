@@ -1,6 +1,4 @@
-## Binary Search Tree
 
-<img width="1720" alt="Screenshot 2024-09-03 at 14 48 11" src="https://github.com/user-attachments/assets/b637d079-2124-4e68-9a26-74122820bcb7">
 
 <img width="800" alt="Binary Search Tree Visualization" src="https://example.com/screenshot.png">
 Project Description
