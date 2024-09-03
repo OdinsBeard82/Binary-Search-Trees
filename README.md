@@ -1,53 +1,49 @@
+<img width="1720" alt="Screenshot 2024-09-03 at 14 48 11" src="https://github.com/user-attachments/assets/b637d079-2124-4e68-9a26-74122820bcb7">
+
+
 Binary Search Tree
-A web-based tool to visualize and interact with a Binary Search Tree (BST), implemented in JavaScript. This project provides a visual representation of BST operations such as insertion, deletion, and traversal.
+View Demo
+
+<img width="800" alt="BST Visualization" src="https://example.com/screenshot.png">
+Project Description
+Binary Search Tree is a web-based application that visualizes the operations of a Binary Search Tree (BST). It allows users to interact with the tree, performing operations like insertion, deletion, and traversals. The project provides an intuitive visual representation of the BST structure, making it a great tool for learning and demonstrating how binary search trees work.
 
 Table of Contents
-Introduction
-Features
-Getting Started
-Prerequisites
+Project Description
 Installation
 Usage
+Features
+Technologies Used
 Project Structure
 Contributing
 License
 Contact
-Introduction
-This project demonstrates the operations of a Binary Search Tree (BST) with a visual representation on an HTML canvas. It includes functionality for inserting and removing nodes, as well as displaying tree properties like minimum and maximum values, tree height, and balance status.
-
-Features
-Add Nodes: Insert values into the BST.
-Remove Nodes: Delete values from the BST.
-Tree Traversals: Perform and display in-order, pre-order, and post-order traversals.
-Tree Properties: Display minimum and maximum values, tree height, and balance status.
-Visual Representation: Visualize the BST structure on an HTML canvas.
-Getting Started
-Prerequisites
-To run this project, you only need a modern web browser that supports HTML5, CSS3, and JavaScript.
-
 Installation
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/your-username/binary-search-tree.git
+git clone https://github.com/yourusername/binary-search-tree.git
 Navigate to the project directory:
 bash
 Copy code
 cd binary-search-tree
-Open the index.html file in your preferred web browser to view the visualization:
-You can simply double-click on the index.html file.
-Alternatively, you can serve it with a local server if you prefer.
 Usage
-Once you have the project open in your browser:
-
-The binary search tree will automatically be constructed with predefined values.
-The visual representation of the tree will be displayed on the canvas.
-Tree properties such as minimum value, maximum value, level order traversal, minimum height, and maximum height will be displayed below the canvas.
-Use the browser console to interact with the tree by adding, removing nodes, and observing the changes.
+Open the index.html file in your preferred web browser to view the BST visualization.
+Features
+Node Insertion and Deletion: Add and remove nodes from the BST.
+Tree Traversals: Perform in-order, pre-order, and post-order traversals.
+Tree Properties Display: View the minimum and maximum values, tree height, and balance status.
+Visual Representation: Watch the BST structure update in real-time on an HTML canvas.
+Technologies Used
+HTML5 & CSS3: For structuring and styling the web page.
+JavaScript (ES6+): For implementing BST logic and interactivity.
+Canvas API: For drawing and visualizing the binary search tree.
 Project Structure
-index.html: The main HTML file that structures the web page.
-script.js: Contains the JavaScript logic for the BST operations and visualization.
-style.css (optional): Any additional styling for the page.
+index.html: The main HTML file for the web page.
+script.js: Contains the JavaScript code for BST operations and visualization.
+style.css: (optional) Contains additional styling for the web page.
 Contributing
-Contributions are welcome! Please fork this repository and submit a pull request for any improvements or bug fixes.
+Contributions are welcome! Please feel free to fork the repository and submit a pull request with your improvements.
 
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
