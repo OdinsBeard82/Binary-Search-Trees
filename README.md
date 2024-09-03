@@ -2,7 +2,7 @@
 
 ![Screenshot](https://github.com/user-attachments/assets/b637d079-2124-4e68-9a26-74122820bcb7)
 
-![Binary Search Tree Visualization](https://example.com/screenshot.png)
+**[View Demo](https://luxury-medovik-a65f67.netlify.app/)**
 
 ## Project Description
 
