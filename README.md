@@ -1,12 +1,11 @@
 <img width="1720" alt="Screenshot 2024-09-03 at 14 48 11" src="https://github.com/user-attachments/assets/b637d079-2124-4e68-9a26-74122820bcb7">
 
-
 Binary Search Tree
 View Demo
 
-<img width="800" alt="BST Visualization" src="https://example.com/screenshot.png">
+<img width="800" alt="Binary Search Tree Visualization" src="https://example.com/screenshot.png">
 Project Description
-Binary Search Tree is a web-based application that visualizes the operations of a Binary Search Tree (BST). It allows users to interact with the tree, performing operations like insertion, deletion, and traversals. The project provides an intuitive visual representation of the BST structure, making it a great tool for learning and demonstrating how binary search trees work.
+Binary Search Tree is a web-based application designed to visualize and interact with binary search trees (BSTs). This tool helps users understand and demonstrate key operations of BSTs, including insertion, deletion, and traversal, through an interactive and real-time visual representation.
 
 Table of Contents
 Project Description
@@ -20,15 +19,19 @@ License
 Contact
 Installation
 Clone the repository:
+
 bash
 Copy code
 git clone https://github.com/yourusername/binary-search-tree.git
 Navigate to the project directory:
+
 bash
 Copy code
 cd binary-search-tree
+Open index.html in your web browser to view the application.
+
 Usage
-Open the index.html file in your preferred web browser to view the BST visualization.
+Open index.html to view and interact with the BST visualization.
 Features
 Node Insertion and Deletion: Add and remove nodes from the BST.
 Tree Traversals: Perform in-order, pre-order, and post-order traversals.
