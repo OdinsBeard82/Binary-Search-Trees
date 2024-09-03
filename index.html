@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binary Search Trees</title>
+    <title>Binary Search Tree</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #333;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        canvas {
+            border: 1px solid #333;
+            margin: 20px auto;
+            background-color: #fff;
+        }
+
+        #info {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        #info p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        #info span {
+            font-weight: bold;
+            color: #007BFF;
+        }
+    </style>
 </head>
+
 <body>
+    <h1>Binary Search Tree</h1>
+    <canvas id="bstCanvas" width="800" height="600"></canvas>
+    <div id="info">
+        <p>Minimum value: <span id="minValue"></span></p>
+        <p>Maximum value: <span id="maxValue"></span></p>
+        <p>Level Order: <span id="levelOrder"></span></p>
+        <p>Find Min Height: <span id="minHeight"></span></p>
+        <p>Find Max Height: <span id="maxHeight"></span></p>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
