@@ -37,8 +37,6 @@ Binary Search Tree is a web-based application designed to visualize and interact
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Installation
 
@@ -83,16 +81,4 @@ Open `index.html` to view and interact with the BST visualization.
 
 Contributions are welcome! Please feel free to fork the repository and submit a pull request with your improvements.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any inquiries, please contact [your-email@example.com](mailto:your-email@example.com).
-
-Contributing
-Contributions are welcome! Please feel free to fork the repository and submit a pull request with your improvements.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
